@@ -1,9 +1,9 @@
 # ShallowNeuralNetwork
 
 ## PROJECT DESCRIPTION:
-Goal: Reconstruct human speech from neural signal
+* Goal: Reconstruct human speech from neural signal
 
-Data Source: Data is from an experiment that clinical doctor electro-nodes in a subject’s cortical surface and subject listens to 2100 human reading sentences. At the same time, recording audio signal and neural signal. 
+* Data Source: Data is from an experiment that clinical doctor electro-nodes in a subject’s cortical surface and subject listens to 2100 human reading sentences. At the same time, recording audio signal and neural signal. 
 
 ## Method: 
 1. Split data into two categories activated or inhabitated(based on neural activity) with Hidden Markov Model
