@@ -16,6 +16,7 @@
   * Can be used for distributed computating, becaused of the by step computation
 
 * MODEL IDEA VISUALIZATION 
+
 ![alt tag](https://cloud.githubusercontent.com/assets/14370804/22751570/80cd5cac-edfa-11e6-9dc9-36824fd312ae.png)
 
 
