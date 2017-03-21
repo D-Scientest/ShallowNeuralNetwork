@@ -1,38 +1,38 @@
 # ShallowNeuralNetwork
 
 PROJECT DESCRIPTION:
-	Goal: Reconstruct human speech from neural signal
+Goal: Reconstruct human speech from neural signal
 
-	Data Source: Data is from an experiment that clinical doctor electro-nodes in a subject’s cortical surface and subject listens to 2100 human reading sentences. At the same time, recording audio signal and neural signal. 
+Data Source: Data is from an experiment that clinical doctor electro-nodes in a subject’s cortical surface and subject listens to 2100 human reading sentences. At the same time, recording audio signal and neural signal. 
 
-	Method: 
-      1. Split data into two categories activated or inhabitated(based on neural activity) with Hidden Markov Model
-			2. First layer: Create new variables by extracting feature from each frequency(6) band and location(70), 
-			3. Second Layer: Make Final prediction based on 76 new variables from the first layer
+Method: 
+1. Split data into two categories activated or inhabitated(based on neural activity) with Hidden Markov Model
+2. First layer: Create new variables by extracting feature from each frequency(6) band and location(70), 
+3. Second Layer: Make Final prediction based on 76 new variables from the first layer
 	
 
 HOW TO USE:
-	Environment(IDE): Rstudio
+Environment(IDE): Rstudio
 
-	Steps:
-	  1. open Rstudio
-		2. click "File" in the menu
-		3. then "Open Project..."
-		4. go to README.md directory
-		5. click open
+Steps:
+1. open Rstudio
+2. click "File" in the menu
+3. then "Open Project..."
+4. go to README.md directory
+5. click open
 
 
 CODE STRUCTRE:
-	-main.R (user interface)
-	-load.R (load all the data)
-  -package.R (load all the necessary packages)
-	-source/DataExpore (data exploration and visualization)
-          HMM_State_Splition (Method step 1)
-          Source_HMM_State_Splition (source file for step 1)
-          First_Layer_Model_Selection_Tuning (Method step 2)
-          Source_First_Layer_Model_Selection_Tuning (source file for step 2)
-          Second_Layer_Model_Selection_Tuning (Method step 3)
-          Source_Second_Layer_Model_Selection_Tuning (source file for step 3)
+-main.R (user interface)
+-load.R (load all the data)
+-package.R (load all the necessary packages)
+-source/DataExpore (data exploration and visualization)
+HMM_State_Splition (Method step 1)
+Source_HMM_State_Splition (source file for step 1)
+First_Layer_Model_Selection_Tuning (Method step 2)
+Source_First_Layer_Model_Selection_Tuning (source file for step 2)
+Second_Layer_Model_Selection_Tuning (Method step 3)
+Source_Second_Layer_Model_Selection_Tuning (source file for step 3)
 
 
 MODEL VISUALIZATION 
