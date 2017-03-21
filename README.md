@@ -1,9 +1,9 @@
-# ShallowNeuralNetwork
-
 ## PROJECT DESCRIPTION:
 * Goal: Reconstruct human speech from neural signal
 
 * Data Source: Data is from an experiment that clinical doctor electro-nodes in a subject’s cortical surface and subject listens to 2100 human reading sentences. At the same time, recording audio signal and neural signal. 
+
+* Project Link: https://inclass.kaggle.com/c/rice-stat-640-444-2016
 
 ## IDEA: 
 * Basic idea: From neural network: A good neural network model is the one has the modeling structure to extract the important features from data
