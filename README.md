@@ -5,6 +5,20 @@
 
 * Data Source: Data is from an experiment that clinical doctor electro-nodes in a subject’s cortical surface and subject listens to 2100 human reading sentences. At the same time, recording audio signal and neural signal. 
 
+## Idea: 
+* Basic idea: From neural network: A good neural network model is the one has the modeling structure to extract the important features from data
+* Background knowledge: In neural science, different frequency signal is from different depth of brain and the information used to reconstruct audio signal can be linear or non-linear. The same for different electronodes.
+* Idea: Two layers modeling
+	First Layer: Apply different models, linear or non-linear, to different frequencies and locations and select the optimal one to make the prediction which is the input for the second layer
+	Second Layer: Apply different models to the result from the first layer and make the final prediction
+* Advantage:
+..1. Model structure illustrates deep insight from the domain, neural science, knowledge
+..2. Can be used for distributed computating, becaused of the by step computation
+
+## MODEL VISUALIZATION 
+![alt tag](https://cloud.githubusercontent.com/assets/14370804/22751570/80cd5cac-edfa-11e6-9dc9-36824fd312ae.png)
+
+
 ## Method: 
 1. Split data into two categories activated or inhabitated(based on neural activity) with Hidden Markov Model
 2. First layer: Create new variables by extracting feature from each frequency(6) band and location(70), 
@@ -35,6 +49,4 @@ Steps:
 ..* Source_Second_Layer_Model_Selection_Tuning (source file for step 3)
 
 
-## MODEL VISUALIZATION 
-![alt tag](https://cloud.githubusercontent.com/assets/14370804/22751570/80cd5cac-edfa-11e6-9dc9-36824fd312ae.png)
 
