@@ -12,8 +12,8 @@
 	First Layer: Apply different models, linear or non-linear, to different frequencies and locations and select the optimal one to make the prediction which is the input for the second layer
 	Second Layer: Apply different models to the result from the first layer and make the final prediction
 * Advantage:
-..* Model structure illustrates deep insight from the domain, neural science, knowledge
-..* Can be used for distributed computating, becaused of the by step computation
+  * Model structure illustrates deep insight from the domain, neural science, knowledge
+  * Can be used for distributed computating, becaused of the by step computation
 
 ### MODEL IDEA VISUALIZATION 
 ![alt tag](https://cloud.githubusercontent.com/assets/14370804/22751570/80cd5cac-edfa-11e6-9dc9-36824fd312ae.png)
@@ -43,10 +43,10 @@ Steps:
 * source/DataExpore (data exploration and visualization)
   * HMM_State_Splition (Method step 1)
   * Source_HMM_State_Splition (source file for step 1)
- First_Layer_Model_Selection_Tuning (Method step 2)
-... Source_First_Layer_Model_Selection_Tuning (source file for step 2)
-... Second_Layer_Model_Selection_Tuning (Method step 3)
-... Source_Second_Layer_Model_Selection_Tuning (source file for step 3)
+  * First_Layer_Model_Selection_Tuning (Method step 2)
+  * Source_First_Layer_Model_Selection_Tuning (source file for step 2)
+  * Second_Layer_Model_Selection_Tuning (Method step 3)
+  * Source_Second_Layer_Model_Selection_Tuning (source file for step 3)
 
 
 
