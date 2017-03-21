@@ -41,12 +41,12 @@ Steps:
 * load.R (load all the data)
 * package.R (load all the necessary packages)
 * source/DataExpore (data exploration and visualization)
-...* HMM_State_Splition (Method step 1)
-...* Source_HMM_State_Splition (source file for step 1)
-...* First_Layer_Model_Selection_Tuning (Method step 2)
-...* Source_First_Layer_Model_Selection_Tuning (source file for step 2)
-...* Second_Layer_Model_Selection_Tuning (Method step 3)
-...* Source_Second_Layer_Model_Selection_Tuning (source file for step 3)
+... HMM_State_Splition (Method step 1)
+... Source_HMM_State_Splition (source file for step 1)
+... First_Layer_Model_Selection_Tuning (Method step 2)
+... Source_First_Layer_Model_Selection_Tuning (source file for step 2)
+... Second_Layer_Model_Selection_Tuning (Method step 3)
+... Source_Second_Layer_Model_Selection_Tuning (source file for step 3)
 
 
 
