@@ -4,6 +4,7 @@
 # extracted from original data
 #
 #########################################################
+
 compressList <- c(0,1,7,12,17,23,28,31,32)# compressed frequency index 
 source("source/Source_Second_Layer_Model_Selection_Tuning/FinalModelCV.R")
 train_y <- as.data.frame(fread("data/train_Y_ecog.csv"))
@@ -43,6 +44,8 @@ for(freqIdx_ in 1:32){
   mse <- as.numeric(read.table(mseOutputPath, sep = ','))
   Mse <- c(Mse, mse)
 }
-print(mean(Mse))
+plot(Mse, type = 'l', main = 'MSE for each output frequency', xlab = 'frequency', ylab = 'MSE', lwd = 2, col = 'blue')
+abline(h = mean(Mse), col = 'red', lwd = 2)
+legend(15,14,c("Each frequency","Average"), lty=c(1,1),lwd=c(2.5,2.5),col=c("blue", "red"))
 
 

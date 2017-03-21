@@ -1,15 +1,18 @@
-# setwd('/home/zhenshan/Dropbox/STAT640CompetitionPrivate')
-HMM_State_Total <- function(input_, bandIdx_, breakPoint_, output_ = NULL, senNumber_, seed_ = 1234){
-  # input_<- train_x; bandIdx_ <- 1; breakPoint_ <- train_breakPoint; senNumber <- 70;
-  # output_ <- train_y
-  source("source/Source_HMM_State_Splition/HMM_State.R")
+#########################################################
+#
+# HMM data splition: 
+#           Helper function for HMM_State_output_Band.R
+#########################################################
+
+HMM_State_Total_Band <- function(input_, bandIdx_, breakPoint_, output_ = NULL, senNumber_, seed_ = 1234){
+  source("source/Source_HMM_State_Splition/HMM_State_Band.R")
   inhabitedState <- NULL
   activatedState <- NULL
   inhabited_breakPoint <- NULL
   activated_breakPoint <- NULL
   
   for(senIdx_ in 1:senNumber_){
-    senState <- HMM_State(input_ = input_, senIdx_ = senIdx_, bandIdx_ = bandIdx_, 
+    senState <- HMM_State_Band(input_ = input_, senIdx_ = senIdx_, bandIdx_ = bandIdx_, 
                           breakPoint_ = train_breakPoint, seed_ = seed_)
     inhabitedState <- c(inhabitedState, senState$inhabitated)
     activatedState <- c(activatedState, senState$activated)

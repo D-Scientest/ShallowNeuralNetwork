@@ -6,14 +6,12 @@
 #   output: 1. activated and inhabited neural data based on frequency band
 #           2. sentence breakpoint for both types of data
 #########################################################
-test_x <- as.data.frame(fread("data/test_X_ecog.csv"))
-# train_y <- as.data.frame(fread("data/train_Y_ecog_compressed.csv"))
-test_breakPoint <- as.data.frame(fread("data/test_breakpoints.txt"))
+
 sentenceNumber <- 5
 
-source("source/Source_HMM_State_Splition/HMM_State_Total.R")
+source("source/Source_HMM_State_Splition/HMM_State_Total_Band.R")
 for(bandIdx in 1:6){
-  hmmState <- HMM_State_Total(input_ = test_x, bandIdx_ = bandIdx, breakPoint_ = test_breakPoint,
+  hmmState <- HMM_State_Total_Band(input_ = test_x, bandIdx_ = bandIdx, breakPoint_ = test_breakPoint,
                               senNumber_ = sentenceNumber,seed_ = 1234)
   path1 <- paste0("data/HMM_State_Test/inhabited_X_",bandIdx,'.csv')
   path2 <- paste0("data/HMM_State_Test/activated_X_",bandIdx,'.csv')

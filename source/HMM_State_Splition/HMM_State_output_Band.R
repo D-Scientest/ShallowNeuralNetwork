@@ -3,18 +3,16 @@
 # HMM data splition: 
 #           splitting training neural signal data into two parts, 
 #           activated and inhabitated
-#   output: 1. activated and inhabited neural data based on location 
-#           2. activated and inhabited neural data based on frequency
+#   output: 1. activated and inhabited neural data based on frequency band
+#           2. sentence breakpoint for both types of data
+#           3. index for both types of data in original data
 #########################################################
-train_x <- as.data.frame(fread("data/train_X_ecog.csv"))
-train_y <- as.data.frame(fread("data/train_Y_ecog_compress.csv"))
-train_breakPoint <- as.data.frame(fread("data/train_breakpoints.txt"))
 sentenceNumber <- 10
 
-source("source/Source_HMM_State_Splition/HMM_State_Total.R")
+source("source/Source_HMM_State_Splition/HMM_State_Total_Band.R")
 for(bandIdx in 1:6){
-  hmmState <- HMM_State_Total(input_ = train_x, bandIdx_ = bandIdx, breakPoint_ = train_breakPoint,
-                  output_ = train_y,senNumber_ = sentenceNumber,seed_ = 1234)
+  hmmState <- HMM_State_Total_Band(input_ = train_x, bandIdx_ = bandIdx, breakPoint_ = train_breakPoint,
+                  output_ = train_y_compress,senNumber_ = sentenceNumber,seed_ = 1234)
   path1 <- paste0("data/HMM_State_Train/inhabited_X_",bandIdx,'.csv')
   path2 <- paste0("data/HMM_State_Train/activated_X_",bandIdx,'.csv')
   path3 <- paste0("data/HMM_State_Train/inhabited_Y_",bandIdx,'.csv')

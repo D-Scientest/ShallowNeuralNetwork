@@ -1,7 +1,10 @@
-# setwd('/home/zhenshan/Dropbox/STAT640CompetitionPrivate')
+#########################################################
+#
+# HMM data splition: 
+#           Helper function for HMM_State_output_Location.R
+#########################################################
+
 HMM_State_Total_Location <- function(input_, LocIdx_, breakPoint_, output_ = NULL, senNumber_ = 140, seed_ = 1234){
-  # input_<- train_x_switch; LocIdx_ <- 1; breakPoint_ <- train_breakPoint; senNumber <- 2;
-  # output_ <- train_y
   source("source/Source_HMM_State_Splition/HMM_State_Location.R")
   inhabitedState <- NULL
   activatedState <- NULL

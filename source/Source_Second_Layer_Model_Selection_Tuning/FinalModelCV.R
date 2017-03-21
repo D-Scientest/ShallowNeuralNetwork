@@ -1,3 +1,9 @@
+#########################################################
+#
+# Helper function for FinalPrediction.R
+#
+#########################################################
+
 FinalModelCV <- function(inputTrain_, outputTrain_, inputTest_, break_point_, freqIdx_, realInputTest_ = NULL){
   # library(glmnet); library(foreach); library(doSNOW)
   # inputTrain_ <- NewInput_Train
@@ -40,7 +46,7 @@ FinalModelCV <- function(inputTrain_, outputTrain_, inputTest_, break_point_, fr
   # ## ridge in a parallel loop
   # ridgeLoop <- foreach(i=1:cv_times_ridge, .combine='cbind', .options.snow = opts, .packages = 'glmnet') %dopar% {
   #   ## split data for cv
-    dat <- splitBlocksCV(X = inputTrain_, Y = as.data.frame(outputTrain_), realY = as.data.frame(realInputTest_),break_point = break_point_, seed = i)
+    dat <- splitBlocksCV(X = inputTrain_, Y = as.data.frame(outputTrain_), realY = as.data.frame(realInputTest_),break_point = break_point_, seed = 1234)
   #   
   #   ## training data
   #   ridgeFitMse <- glmnet_model(train_input = as.matrix(dat$trainX), 

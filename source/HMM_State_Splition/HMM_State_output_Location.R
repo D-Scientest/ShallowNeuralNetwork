@@ -6,14 +6,11 @@
 #   output: 1. activated and inhabited neural data based on location 
 #           2. sentence breakpoint for both types of data
 #########################################################
-train_x <- as.data.frame(fread("data/train_X_ecog_switched.csv"))
-train_y_compress <- as.data.frame(fread("data/train_Y_ecog_compress.csv"))
-train_breakPoint <- as.data.frame(fread("data/train_breakpoints.txt"))
 sentenceNumber <- 10
 
 source("source/Source_HMM_State_Splition/HMM_State_Total_Location.R")
 for(locIdx in 1:70){
-  hmmState <- HMM_State_Total_Location(input_ = train_x, LocIdx_ = locIdx, breakPoint_ = train_breakPoint,
+  hmmState <- HMM_State_Total_Location(input_ = train_x_switched, LocIdx_ = locIdx, breakPoint_ = train_breakPoint,
                               output_ = train_y_compress,senNumber_ = sentenceNumber,seed_ = 1234)
   path1 <- paste0("data/HMM_State_Location_Train/inhabited_X_",locIdx,'_Location.csv')
   path2 <- paste0("data/HMM_State_Location_Train/activated_X_",locIdx,'_Location.csv')
